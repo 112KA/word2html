@@ -54,6 +54,12 @@ const App = (props:any) => {
     <Container className="py-8">
       {
         <>
+          <Box>
+            <dl>
+              <dt>GitHub:</dt>
+              <dd><a href="https://github.com/112KA/word2html" target="_blank" rel="noreferrer">https://github.com/112KA/word2html</a></dd>
+            </dl>
+          </Box>
           <Box className={originalText.length === 0 ? '' : 'hidden'}>
             <RawData source={source} setSource={setSource}/>
             <Box className="mt-4" display="flex">
