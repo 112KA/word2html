@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - "main"
+      - "feature/action"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,4 +23,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          destination_dir: tools/word2html
