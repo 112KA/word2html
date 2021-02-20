@@ -25,7 +25,7 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: 112KA/112KA.github.io
-          PUBLISH_BRANCH: master
-          # PUBLISH_DIR: ./tools/word2html
+          publish_branch: master
+          # publish_dir: ./tools/word2html
           # github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
