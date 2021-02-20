@@ -3,15 +3,14 @@ name: Deploy
 on:
   push:
     branches:
-      # - "feature/action"
       - "main"
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        # with:
-        #   ref: feature/action
+        with:
+          ref: main
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
@@ -24,5 +23,8 @@ jobs:
       - name: App Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: 112KA/112KA.github.io
+          publish_branch: master
+          destination_dir: tools/word2html
           publish_dir: ./build
